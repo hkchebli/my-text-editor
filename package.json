@@ -1,0 +1,33 @@
+{
+  "name": "my-text-editor",
+  "version": "1.0.0",
+  "description": "my text editor",
+  "main": "server.js",
+  "scripts": {
+    "start:dev": "concurrently \"cd Develop/server && npm run server\" \"cd Develop/client && npm run dev\"",
+    "start": "npm run build && cd Develop/server && node server.js",
+    "server": "cd Develop/server nodemon server.js --ignore client",
+    "build": "cd Develop/client && npm run build",
+    "install": "cd Develop/client && npm install",
+    "client": "cd Develop/client && npm start"
+  },
+  "keywords": [],
+  "author": "Hussein Chebli",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^1.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkchebli/my-text-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hkchebli/my-text-editor/issues"
+  },
+  "homepage": "https://github.com/hkchebli/my-text-editor#readme"
+}
